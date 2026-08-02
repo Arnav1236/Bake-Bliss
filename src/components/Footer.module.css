@@ -1,0 +1,67 @@
+.footer {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  padding: 60px 0 30px;
+  margin-top: 80px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.column h4 {
+  color: var(--color-bg-light);
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.column p {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 10px;
+}
+
+.column a {
+  display: block;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 10px;
+}
+
+.column a:hover {
+  color: var(--color-accent);
+}
+
+.newsletter {
+  display: flex;
+  margin-top: 15px;
+}
+
+.input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  outline: none;
+  flex: 1;
+}
+
+.submitBtn {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 10px 20px;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  font-weight: bold;
+}
+
+.submitBtn:hover {
+  background-color: #801c36;
+}
+
+.bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+}

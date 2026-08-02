@@ -1,0 +1,166 @@
+.configurator {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 20px 50px rgba(59, 35, 20, 0.08);
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(155, 34, 66, 0.1);
+  color: var(--color-accent);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.layout {
+  display: flex;
+  gap: 40px;
+}
+
+.steps {
+  flex: 1;
+}
+
+.step {
+  margin-bottom: 30px;
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.stepNumber {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.stepTitle {
+  font-size: 20px;
+  margin: 0;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.optionCard {
+  border: 2px solid #EAE6DF;
+  border-radius: var(--border-radius);
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.optionCard:hover {
+  border-color: rgba(59, 35, 20, 0.3);
+}
+
+.optionCard.selected {
+  border-color: var(--color-accent);
+  background-color: rgba(155, 34, 66, 0.05);
+}
+
+.optionName {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.optionPrice {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.preview {
+  width: 350px;
+  background-color: var(--color-bg-light);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.previewImage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EAE6DF;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  min-height: 250px;
+}
+
+.summary {
+  border-top: 1px solid #EAE6DF;
+  padding-top: 20px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--color-text-muted);
+}
+
+.summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #EAE6DF;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-primary-dark);
+}
+
+.addToCartBtn {
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+  .preview {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .optionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

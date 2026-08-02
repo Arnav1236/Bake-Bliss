@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(59, 35, 20, 0.1);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.navLink {
+  font-weight: 500;
+  color: var(--color-text-main);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.navLink:hover {
+  color: var(--color-accent);
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.iconBtn {
+  color: var(--color-primary-dark);
+  transition: color var(--transition-speed) ease;
+}
+
+.iconBtn:hover {
+  color: var(--color-accent);
+}
+
+.urgencyBanner {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}

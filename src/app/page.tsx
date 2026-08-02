@@ -1,65 +1,119 @@
+import styles from "./page.module.css";
+import Configurator from "@/components/Configurator";
+import Link from "next/link";
 import Image from "next/image";
+import { Camera } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+    <div>
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <Image 
+          src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=2000&auto=format&fit=crop"
+          alt="Premium dark moody chocolate cake"
+          fill
           priority
+          style={{ objectFit: 'cover', zIndex: 1, opacity: 0.7 }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+        <div className={styles.heroContent}>
+          <div className={styles.offerBadge}>Flat 20% OFF + Free Delivery (5km)</div>
+          <h1 className={styles.heroTitle}>Sensory Perfection in Every Bite</h1>
+          <p className={styles.heroSubtitle}>
+            Experience Airoli's most luxurious, handcrafted cakes. Made fresh daily with premium ingredients.
           </p>
+          <Link href="/cakes" className="btn-primary" style={{ fontSize: '18px', padding: '15px 30px' }}>
+            Explore Our Cakes
+          </Link>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Build-Your-Layer Configurator */}
+      <section className={`container ${styles.section}`} style={{ backgroundColor: '#FDFBF7' }}>
+        <Configurator />
+      </section>
+
+      {/* Bundle Deals */}
+      <section className={`container ${styles.section}`}>
+        <h2 className={styles.sectionTitle}>Curated For You</h2>
+        <div className={styles.bundlesGrid}>
+          
+          <div className={styles.bundleCard}>
+            <div className={styles.bundleImage}>
+              <Image 
+                src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?q=80&w=600&auto=format&fit=crop" 
+                alt="Birthday Pack"
+                width={400}
+                height={250}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </div>
+            <div className={styles.bundleContent}>
+              <h3 className={styles.bundleTitle}>Full Birthday Celebration Pack</h3>
+              <p className={styles.bundleDesc}>
+                Everything you need: A premium 1kg cake, party pops, candles, and a customized greeting card.
+              </p>
+              <button className="btn-secondary">View Details</button>
+            </div>
+          </div>
+
+          <div className={styles.bundleCard}>
+            <div className={styles.bundleImage}>
+              <Image 
+                src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?q=80&w=600&auto=format&fit=crop" 
+                alt="Special Cakes"
+                width={400}
+                height={250}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </div>
+            <div className={styles.bundleContent}>
+              <h3 className={styles.bundleTitle}>Birthday Special Cakes</h3>
+              <p className={styles.bundleDesc}>
+                Our best-selling signature cakes crafted especially for memorable birthdays.
+              </p>
+              <button className="btn-secondary">Shop Now</button>
+            </div>
+          </div>
+
+          <div className={styles.bundleCard}>
+            <div className={styles.bundleImage}>
+              <Image 
+                src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?q=80&w=600&auto=format&fit=crop" 
+                alt="Custom Cakes"
+                width={400}
+                height={250}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </div>
+            <div className={styles.bundleContent}>
+              <h3 className={styles.bundleTitle}>Custom Cakes</h3>
+              <p className={styles.bundleDesc}>
+                Have a specific theme in mind? We bring your imagination to life with bespoke designs.
+              </p>
+              <button className="btn-secondary">Enquire Now</button>
+            </div>
+          </div>
+
         </div>
-      </main>
+      </section>
+
+      {/* Social Proof Section */}
+      <section className={styles.section} style={{ backgroundColor: '#EAE6DF' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h2 className={styles.sectionTitle} style={{ marginBottom: '10px' }}>Join Our Community</h2>
+            <p style={{ color: 'var(--color-text-muted)' }}>Follow us on Instagram @bakebliss.airoli for live assembly videos and more!</p>
+          </div>
+          
+          <div className={styles.socialGrid}>
+            <div className={styles.socialItem}><Camera size={32} /></div>
+            <div className={styles.socialItem}><Camera size={32} /></div>
+            <div className={styles.socialItem}><Camera size={32} /></div>
+            <div className={styles.socialItem}><Camera size={32} /></div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
